@@ -1,0 +1,323 @@
+html, body{
+    margin: 0%;
+    padding: 0%;
+    background-color: black;
+    color: whitesmoke;
+    font-family: "Jersey 25";
+    overflow-x: hidden;
+    height:100vh;
+}
+/*Jersey 10 - Jersey 25 - Tiny5*/
+
+#up {
+    height: 20vh;
+}
+
+.container{
+    margin: 0%;
+    padding: 0%;
+    height: 100vh;
+    width: 100vw;
+}
+
+.cool{
+    background-image: url(/Img/background/Starswhitered.png);
+    background-size: cover;
+    background-repeat:repeat-y;
+}
+
+#me{
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+    height: 50vh;
+    background-color: #000000;
+}
+
+#me #Info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#me p{
+    font-size: 1.4em;
+}
+
+#me h3{
+    font-size:1.3em;
+}
+
+#me h1{
+    font-size: 900%;
+    margin: 0%;
+}
+
+#me h3, #me p{
+    margin-top: -10px;
+    margin-bottom: 0;
+}
+
+#MEME{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#MEME p{
+    text-align: center;
+    font-size: 2em;
+}
+
+#me img{
+    height:35vh;
+    width: 35vh;
+    margin: 0%;
+}
+
+#down{
+    display: flex;
+    justify-content: center;
+}
+
+button {
+     color: #000000;
+     padding: 15px 40px 15px 40px;
+     background-color: #d83434;
+     font-size: 350%;
+     height: fit-content;
+     font-family: "Jersey 25";
+     border: 0;
+     box-shadow: 0px 5px rgb(255, 255, 255), 0px -5px rgb(255, 255, 255), 5px 0px rgb(255, 255, 255), -5px 0px rgb(255, 255, 255), 0px 10px #ffffff38, 5px 5px #ffffff38, -5px 5px #ffffff38, inset 0px 5px #ffffff36 ;
+     cursor: pointer;
+     margin-top: 4%;
+}
+
+ button:active {
+     transform: translateY(5px);
+     box-shadow: 0px 5px rgb(255, 255, 255), 0px -5px rgb(255, 255, 255), 5px 0px rgb(255, 255, 255), -5px 0px rgb(255, 255, 255),inset 0px 5px #ffffff38;
+}
+
+.glitch {
+    position: relative;
+    font-size: 3em;
+    padding: 15px 40px;
+    color: black;
+    background: #d83434;
+    border: none;
+    cursor: pointer;
+    font-family: "Jersey 25";
+    overflow: hidden;
+}
+
+/* Faux layers */
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #d83434;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 red;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 cyan;
+}
+
+/* Animation */
+.glitch::before {
+    animation: glitch1 0.3s infinite;
+    opacity: 1;
+}
+
+.glitch::after {
+    animation: glitch2 0.3s infinite;
+    opacity: 1;
+}
+
+@keyframes glitch1 {
+    0% { clip-path: inset(0 0 90% 0); }
+    25% { clip-path: inset(10% 0 80% 0); }
+    50% { clip-path: inset(40% 0 40% 0); }
+    75% { clip-path: inset(80% 0 10% 0); }
+    100% { clip-path: inset(0 0 90% 0); }
+}
+
+@keyframes glitch2 {
+    0% { clip-path: inset(80% 0 10% 0); }
+    25% { clip-path: inset(40% 0 40% 0); }
+    50% { clip-path: inset(10% 0 80% 0); }
+    75% { clip-path: inset(0 0 90% 0); }
+    100% { clip-path: inset(80% 0 10% 0); }
+}
+
+/* Mode creepy */
+
+.creepy {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("Img/background/backeye.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* Scanlines */
+.creepy::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.03) 0px,
+        rgba(255,255,255,0.03) 1px,
+        transparent 2px,
+        transparent 4px
+    );
+    pointer-events: none;
+}
+
+/* Glitch flash */
+.creepy::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    mix-blend-mode: difference;
+    opacity: 0;
+    animation: bg-glitch 3s infinite;
+}
+
+#crash {
+    position: fixed;
+    inset: 0;
+    background: black;
+    color: red;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#crash.active {
+    opacity: 1;
+}
+
+.crash-active {
+    animation: screenShake 0.1s infinite;
+}
+
+@keyframes screenShake {
+    0% { transform: translate(0); }
+    25% { transform: translate(5px, -5px); }
+    50% { transform: translate(-5px, 5px); }
+    75% { transform: translate(5px, 5px); }
+    100% { transform: translate(0); }
+}
+
+
+@keyframes bg-glitch {
+    0%, 95% { opacity: 0; }
+    96% { transform: translateX(10px); opacity: 0.3; }
+    97% { transform: translateX(-10px); }
+    98% { transform: translateY(5px); }
+    99% { opacity: 0; transform: none; }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    #me {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+        gap: 20px;
+    }
+
+    #me h1 {
+        font-size: 550%;
+        text-align: center;
+    }
+
+    #me h3 {
+        font-size: 1.1em;
+    }
+
+    #me p {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    #me img {
+        height: 25vh;
+        width: 25vh;
+    }
+
+    #MEME p {
+        font-size: 1.5em;
+        padding: 0 15px;
+    }
+
+    button {
+        font-size: 200%;
+        padding: 12px 30px;
+        margin: 20px;
+    }
+
+}
+
+/*Palette douce vert beige rose
+#A1A27E
+#D5CD90
+#EEEACB
+#D7A28C
+#BA8383
+
+ou
+#84033C
+#C96A72
+#FFCBCC
+#EFD8D3
+#C1D5AF
+
+#A975CC 
+
+#CDB2DA
+#FFC4D7
+#FFABC5
+#B9DCFE
+#9ECDFF
+
+ou
+#FFCDFF
+#E3BDFF
+#C1ADFF
+#AFB8FF
+#B2CAFF
+
+#324C40
+#38573F
+#547D54
+#9EAD84
+#D5D1C6*/
