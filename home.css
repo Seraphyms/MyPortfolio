@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Rubik+80s+Fade&display=swap');
+
+html, body{
+    background-color: black;
+    color: #b6b6b6;
+    padding: 0%;
+    margin: 0%;
+}
+/*Nav*/
+nav{
+    height: 5vh;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+}
+
+/*Introduction*/
+    #intro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 95vh;
+        background-image: url(Img/background/AIEnhancer_redisshstars.png);
+        background-repeat: no-repeat;
+        background-size: auto 70%;   /* largeur 100%, hauteur 50% */
+        background-position: bottom center; /* collé en bas */
+    }
+
+    #intro h1{
+        font-size:clamp(3rem, 8vw, 8rem);
+        margin: 0;
+        font-family: "Barrio", system-ui;
+    }
+
+    #intro img:first-child{
+        height: auto;
+        width: 60vw;
+        margin: 4%;
+        filter: brightness(170%);
+    }
+    #star{
+        width: 20vw;
+        height: auto;
+        filter: opacity(70%);
+        animation: rotation 10s linear infinite;
+    }
+    
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+/*Presentation*/
+#presentation{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-image: url(Img/background/AIEnhancer_redisshstars.png);
+        background-repeat: no-repeat;
+    background-size: auto 70%;
+    background-position: bottom center;
+    transform: scaleY(-1)
+}
+
+
+#presentation > * {
+    transform: scaleY(-1);
+}
