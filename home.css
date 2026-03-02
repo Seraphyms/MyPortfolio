@@ -22,11 +22,12 @@ nav{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 95vh;
+        height: 100vh;
         background-image: url(Img/background/AIEnhancer_redisshstars.png);
         background-repeat: no-repeat;
         background-size: auto 70%;   /* largeur 100%, hauteur 50% */
         background-position: bottom center; /* collé en bas */
+        border-radius:0 0 50px 50px ;
     }
 
     #intro h1{
@@ -57,19 +58,38 @@ nav{
         }
     }
 
+#divider{
+    height: 15vh;
+    background-image: url(Img/background/starry.jpg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
 /*Presentation*/
 #presentation{
     display: flex;
     align-items: center;
-    height: 100vh;
-    background-image: url(Img/background/AIEnhancer_redisshstars.png);
-        background-repeat: no-repeat;
-    background-size: auto 70%;
-    background-position: bottom center;
-    transform: scaleY(-1)
+    justify-content: center;
+    height: 80vh;
+    background-color: #1a1a1a;
+    border-radius:50px;
+    margin: 0 5% 5vh 5%;
 }
 
+#presentation-text{
+    padding: 50px;
+    background-image: url(/Img/background/BrokenGLass.jpg);
+    background-size: cover;
+    margin: 50px;
+}
 
-#presentation > * {
-    transform: scaleY(-1);
+#presentation-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/Img/background/PicsParTerre.jpg);
+    background-size: cover;
+    margin: 50px;
 }

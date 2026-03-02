@@ -1,65 +1,66 @@
-html, body{
-    margin: 0%;
-    padding: 0%;
+/* ==========================
+   RESET & BASE
+========================== */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
     background-color: black;
     color: whitesmoke;
-    font-family: "Jersey 25";
+    font-family: "Jersey 25", sans-serif;
     overflow-x: hidden;
-    height:100vh;
 }
-/*Jersey 10 - Jersey 25 - Tiny5*/
 
+/* ==========================
+   CONTAINERS
+========================== */
 #up {
     height: 20vh;
 }
 
-.container{
-    margin: 0%;
-    padding: 0%;
-    height: 100vh;
+.container {
+    margin: 0;
+    padding: 0;
     width: 100vw;
+    height: 100vh;
 }
 
-.cool{
+.cool {
     background-image: url(/Img/background/Starswhitered.png);
     background-size: cover;
-    background-repeat:repeat-y;
+    background-repeat: repeat-y;
 }
 
-#me{
+/* ==========================
+   SECTION ME
+========================== */
+#me {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
     height: 50vh;
     background-color: #000000;
 }
 
-#me #Info{
+#Info {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-#me p{
-    font-size: 1.4em;
-}
-
-#me h3{
-    font-size:1.3em;
-}
-
-#me h1{
+#me h1 {
     font-size: 900%;
-    margin: 0%;
+    margin: 0;
 }
 
-#me h3, #me p{
-    margin-top: -10px;
-    margin-bottom: 0;
+#me h3, #me p {
+    font-size: 1.3em;
+    margin: -10px 0 0 0;
 }
 
-#MEME{
+#MEME {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,40 +68,53 @@ html, body{
     gap: 20px;
 }
 
-#MEME p{
+#MEME p {
     text-align: center;
     font-size: 2em;
 }
 
-#me img{
-    height:35vh;
+#me img {
+    height: 35vh;
     width: 35vh;
-    margin: 0%;
+    margin: 0;
 }
 
-#down{
+#down {
     display: flex;
     justify-content: center;
 }
 
+/* ==========================
+   BUTTONS
+========================== */
 button {
-     color: #000000;
-     padding: 15px 40px 15px 40px;
-     background-color: #d83434;
-     font-size: 350%;
-     height: fit-content;
-     font-family: "Jersey 25";
-     border: 0;
-     box-shadow: 0px 5px rgb(255, 255, 255), 0px -5px rgb(255, 255, 255), 5px 0px rgb(255, 255, 255), -5px 0px rgb(255, 255, 255), 0px 10px #ffffff38, 5px 5px #ffffff38, -5px 5px #ffffff38, inset 0px 5px #ffffff36 ;
-     cursor: pointer;
-     margin-top: 4%;
+    color: #000;
+    background-color: #d83434;
+    font-family: "Jersey 25";
+    font-size: 350%;
+    padding: 15px 40px;
+    border: 0;
+    box-shadow: 
+        0px 5px #fff, 0px -5px #fff, 
+        5px 0px #fff, -5px 0px #fff, 
+        0px 10px #ffffff38, 5px 5px #ffffff38, -5px 5px #ffffff38,
+        inset 0px 5px #ffffff36;
+    cursor: pointer;
+    margin-top: 4%;
+    height: fit-content;
 }
 
- button:active {
-     transform: translateY(5px);
-     box-shadow: 0px 5px rgb(255, 255, 255), 0px -5px rgb(255, 255, 255), 5px 0px rgb(255, 255, 255), -5px 0px rgb(255, 255, 255),inset 0px 5px #ffffff38;
+button:active {
+    transform: translateY(5px);
+    box-shadow: 
+        0px 5px #fff, 0px -5px #fff, 
+        5px 0px #fff, -5px 0px #fff, 
+        inset 0px 5px #ffffff38;
 }
 
+/* ==========================
+   GLITCH BUTTON
+========================== */
 .glitch {
     position: relative;
     font-size: 3em;
@@ -113,40 +127,32 @@ button {
     overflow: hidden;
 }
 
-/* Faux layers */
 .glitch::before,
 .glitch::after {
     content: attr(data-text);
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: #d83434;
-    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
+    background: #d83434;
+    color: black;
 }
 
 .glitch::before {
     left: 2px;
     text-shadow: -2px 0 red;
-}
-
-.glitch::after {
-    left: -2px;
-    text-shadow: -2px 0 cyan;
-}
-
-/* Animation */
-.glitch::before {
     animation: glitch1 0.3s infinite;
     opacity: 1;
 }
 
 .glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 cyan;
     animation: glitch2 0.3s infinite;
     opacity: 1;
 }
@@ -167,8 +173,9 @@ button {
     100% { clip-path: inset(80% 0 10% 0); }
 }
 
-/* Mode creepy */
-
+/* ==========================
+   CREEPY SCENE
+========================== */
 .creepy {
     position: relative;
     display: flex;
@@ -179,7 +186,6 @@ button {
     overflow: hidden;
 }
 
-/* Scanlines */
 .creepy::before {
     content: "";
     position: absolute;
@@ -194,7 +200,6 @@ button {
     pointer-events: none;
 }
 
-/* Glitch flash */
 .creepy::after {
     content: "";
     position: absolute;
@@ -203,6 +208,31 @@ button {
     mix-blend-mode: difference;
     opacity: 0;
     animation: bg-glitch 3s infinite;
+}
+
+@keyframes bg-glitch {
+    0%, 95% { opacity: 0; }
+    96% { transform: translateX(10px); opacity: 0.3; }
+    97% { transform: translateX(-10px); }
+    98% { transform: translateY(5px); }
+    99% { opacity: 0; transform: none; }
+}
+
+/* ==========================
+   CRASH & SHAKE
+========================== */
+#crashScene {
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9998;
+    transition: opacity 0.2s ease;
+}
+
+body.crash-mode #crashScene {
+    opacity: 1;
+    pointer-events: all;
 }
 
 #crash {
@@ -218,10 +248,13 @@ button {
     z-index: 9999;
     opacity: 0;
     pointer-events: none;
+    transform: scale(1.2);
+    transition: all 0.15s ease-out;
 }
 
-#crash.active {
+body.crash-active #crash {
     opacity: 1;
+    transform: scale(1);
 }
 
 .crash-active {
@@ -236,16 +269,33 @@ button {
     100% { transform: translate(0); }
 }
 
-
-@keyframes bg-glitch {
-    0%, 95% { opacity: 0; }
-    96% { transform: translateX(10px); opacity: 0.3; }
-    97% { transform: translateX(-10px); }
-    98% { transform: translateY(5px); }
-    99% { opacity: 0; transform: none; }
+/* ==========================
+   BLACKOUT
+========================== */
+#blackout {
+    position: fixed;
+    inset: 0;
+    background: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10000;
 }
 
+body.blackout #blackout {
+    opacity: 1;
+}
 
+/* ==========================
+   FLASH EFFECT
+========================== */
+body.flash {
+    background: white;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
 @media screen and (max-width: 768px) {
 
     #me {
@@ -255,38 +305,16 @@ button {
         gap: 20px;
     }
 
-    #me h1 {
-        font-size: 550%;
-        text-align: center;
-    }
+    #me h1 { font-size: 550%; text-align: center; }
+    #me h3 { font-size: 1.1em; }
+    #me p { font-size: 1.2em; text-align: center; }
 
-    #me h3 {
-        font-size: 1.1em;
-    }
+    #me img { height: 25vh; width: 25vh; }
 
-    #me p {
-        font-size: 1.2em;
-        text-align: center;
-    }
+    #MEME p { font-size: 1.5em; padding: 0 15px; }
 
-    #me img {
-        height: 25vh;
-        width: 25vh;
-    }
-
-    #MEME p {
-        font-size: 1.5em;
-        padding: 0 15px;
-    }
-
-    button {
-        font-size: 200%;
-        padding: 12px 30px;
-        margin: 20px;
-    }
-
+    button { font-size: 200%; padding: 12px 30px; margin: 20px; }
 }
-
 /*Palette douce vert beige rose
 #A1A27E
 #D5CD90

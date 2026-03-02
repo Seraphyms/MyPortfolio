@@ -2,32 +2,27 @@ const startButton = document.getElementById("startButton");
 
 startButton.addEventListener("click", () => {
 
-    // Remplacement du contenu
-    document.body.innerHTML = `
-        <div class="container creepy">
-            <button class="glitch" data-text="I see you">I see you</button>
-        </div>
+    // Activer la scène de crash
+    document.body.classList.add("crash-mode");
 
-        <div id="crash">
-            <h1>FATAL ERROR</h1>
-            <p>System failure detected</p>
-        </div>
-    `;
-
-    // 💥 Crash après 2s
+    // Petit flash pour tension
     setTimeout(() => {
+        document.body.classList.add("flash");
+    }, 200);
+
+    // Apparition du crash
+    setTimeout(() => {
+        document.body.classList.remove("flash");
         document.body.classList.add("crash-active");
-        document.getElementById("crash").classList.add("active");
+    }, 800);
+
+    // Écran noir total après le crash
+    setTimeout(() => {
+        document.body.classList.add("blackout");
     }, 2000);
 
-    // 🕳️ Écran noir
-    setTimeout(() => {
-        document.body.innerHTML = "";
-        document.body.style.background = "black";
-    }, 5000);
-
-    // 🔁 Redirection finale
+    // Redirection finale
     setTimeout(() => {
         window.location.href = "home.html";
-    }, 6000);
+    }, 4000);
 });
