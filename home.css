@@ -1,19 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Barrio&family=Rubik+80s+Fade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap');
+
 
 html, body{
     background-color: black;
-    color: #b6b6b6;
+    color: #dfdddd;
+    font-family: "Jim Nightshade", cursive;
     padding: 0%;
     margin: 0%;
+     font-size: 2vw;
 }
+
+/*Diviseur*/
+.divider{
+    height: 15vh;
+    background-image: url(Img/background/starry.jpg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
 /*Nav*/
 nav{
-    height: 5vh;
+    height: 3vh;
     background-color: #1a1a1a;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 15px;
+     font-size: 0.8vw;
 }
 
 /*Introduction*/
@@ -40,12 +56,12 @@ nav{
         height: auto;
         width: 60vw;
         margin: 4%;
-        filter: brightness(170%);
+        filter: brightness(250%);
     }
     #star{
-        width: 20vw;
+        width: 40vh;
         height: auto;
-        filter: opacity(70%);
+        filter: opacity(90%);
         animation: rotation 10s linear infinite;
     }
     
@@ -58,38 +74,110 @@ nav{
         }
     }
 
-#divider{
-    height: 15vh;
-    background-image: url(Img/background/starry.jpg);
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-
 /*Presentation*/
 #presentation{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 80vh;
-    background-color: #1a1a1a;
+    background-image: url(/Img/background/BrokenGLass.jpg);
+    background-size: cover;
     border-radius:50px;
+    padding: 0%;
     margin: 0 5% 5vh 5%;
 }
 
 #presentation-text{
     padding: 50px;
-    background-image: url(/Img/background/BrokenGLass.jpg);
-    background-size: cover;
-    margin: 50px;
+    margin: 70px;
+    text-align: center;
+}
+
+#presentation-text h2{
+    font-size: 6vw;
+    background-color: black;
+    padding:2vw;
+    border-radius: 5%;
+}
+
+#presentation-text h3{
+    font-size: 3vw;
+    margin: 0;
 }
 
 #presentation-image{
     display: flex;
+        
+}
+
+#presentation-image img{
+    width: auto;
+    height: 80vh;
+    border-radius: 50px;
+}
+
+/*Skilsssssss*/
+
+#skills{
+    text-align: center;
+    height: 100VH;
+}
+
+#mySkills{
+    display:grid;
     justify-content: center;
     align-items: center;
-    background-image: url(/Img/background/PicsParTerre.jpg);
-    background-size: cover;
-    margin: 50px;
+    grid-template-columns: 35vw 35vw;
 }
+
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    width: 30vw;
+    height: 30vh;
+    border-radius: 50px;
+    background-image: url(Img/background/heart\ toile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container h3{
+    font-size: 3vw;
+    margin: 0;
+    margin-bottom: 2vh;
+}
+
+.container h2{
+    font-size: 2vw;
+    margin: 0;
+}
+
+.container ul{
+    list-style:circle inside;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5vw;
+    text-align: left;
+}
+
+.container img{
+    width: auto;
+    height: 30vh;
+}
+
+.container:first-of-type{
+    background-image: url(Img/background/toiles.jpg);
+    text-align: right;
+}
+
+.container:nth-of-type(2){
+    background-image: url(Img/background/BackStarsDark.jpg);
+}
+
+.container:nth-of-type(3){
+    background-image: url(Img/background/tress.jpg);
+}
+
