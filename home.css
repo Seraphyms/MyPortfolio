@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Barrio&family=Rubik+80s+Fade&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jersey+20&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap');
 
 
 html, body{
     background-color: black;
-    color: #f3f3f3;
-    font-family: "Jim Nightshade", cursive;
+    color: #f5f5f5;
+    font-family: "Jacquard 24", cursive;
     padding: 0%;
     margin: 0%;
      font-size: 2vw;
@@ -31,7 +33,7 @@ nav{
     align-items: center;
     padding: 5px 15px;
      font-size: 0.8vw;
-     font-family: "Jersey 20", system-ui;
+     font-family: "Jersey 10", system-ui;
 }
 
 /*Introduction*/
@@ -51,21 +53,21 @@ nav{
     #intro h1{
         font-size:6vw;
         margin: 0;
-        font-family: "Jersey 20", system-ui;
+        font-family: "Jersey 10", system-ui;
     }
 
     #intro img:first-child{
         height: auto;
         width: 60vw;
-        margin: 4%;
         margin-bottom: 0;
         filter: brightness(250%);
     }
     #star{
-        width: 40vh;
+        width: 15vh;
+        margin-top: 5vh;
         height: auto;
         filter: opacity(90%);
-        animation: rotation 10s linear infinite;
+        animation: rotation 7s linear infinite;
     }
     
     @keyframes rotation {
@@ -97,16 +99,21 @@ nav{
 }
 
 #presentation-text h2{
-    font-size: 6vw;
+    font-size: 7vw;
     background-color: black;
-    padding-left: 1.5vw;
+    padding: 1.5vw;
     padding-right: 1.5vw;
     border-radius: 5%;
 }
 
 #presentation-text h3{
-    font-size: 3vw;
+    font-size: 3.5vw;
     margin: 0;
+    font-family: "Jersey 10", sans-serif;
+    letter-spacing: 8px;
+  /*  -webkit-text-stroke: #1a1a1a;
+    -webkit-text-stroke-width: 5px;
+*/
 }
 
 #presentation-image{
@@ -124,14 +131,18 @@ nav{
 
 #skills{
     text-align: center;
-    height: 100VH;
+}
+
+#skills h2{
+    font-size: 5vw;
+    padding-bottom: 0%;
 }
 
 #mySkills{
     display:grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 35vw 35vw;
+    grid-template-columns: 45vw 45vw;
 }
 
 .container{
@@ -140,46 +151,32 @@ nav{
     justify-content: center;
     align-items: center;
     margin: 50px;
-    width: 30vw;
-    height: 30vh;
+    width: 40vw;
+    height: 40vh;
     border-radius: 50px;
     background-image: url(Img/background/BonesV3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.container div{
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 20px;
-    margin:1%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .container h3{
-    font-size: 3vw;
+    font-size: 4.5vw;
     margin: 0;
     margin-bottom: 2vh;
-}
-
-.container h2{
-    font-size: 2vw;
-    margin: 0;
 }
 
 .container ul{
     list-style:circle inside;
     padding: 0;
     margin: 0;
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     text-align: left;
+    font-family: "Jersey 10", sans-serif;
 }
 
 .container img{
     width: auto;
-    height: 30vh;
+    height: 40vh;
 }
 
 .container:first-of-type{
@@ -196,3 +193,21 @@ nav{
     background-color: none;
 }
 
+/*Workkk*/
+#work{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(Img/background/EYESRED.jpg);
+    background-size: cover;
+    height:60vh;
+    width: 100vw;
+    margin-top: 25vh;
+}
+
+#work div{
+    display: flex;
+    height: 30vh;
+    width: 60vw;
+    background-color: rgb(0, 0, 0);
+}
