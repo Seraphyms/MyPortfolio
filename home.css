@@ -8,7 +8,7 @@
 html, body{
     background-color: black;
     color: #f5f5f5;
-    font-family: "Jacquard 24", cursive;
+    font-family: "Jacquard 24", sans-serif;
     padding: 0%;
     margin: 0%;
      font-size: 2vw;
@@ -26,14 +26,37 @@ html, body{
 
 /*Nav*/
 nav{
-    height: 3vh;
-    background-color: #1a1a1a;
+    height: 5vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 15px;
-     font-size: 0.8vw;
-     font-family: "Jersey 10", system-ui;
+}
+
+nav h1{
+    font-size: 60px;
+}
+
+nav div{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-button{
+  font-size: 50px;
+  font-family: "Jersey 10", sans-serif;
+  color: #f5f5f5;
+  letter-spacing: 3px;
+  padding: 3px 10px 3px 15px;
+  border:none;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  &:hover {
+    animation: pulse 0.2s;
+    color: #a10202;
+}
 }
 
 /*Introduction*/
@@ -53,7 +76,7 @@ nav{
     #intro h1{
         font-size:6vw;
         margin: 0;
-        font-family: "Jersey 10", system-ui;
+        font-family: "Jersey 10", sans-serif;
     }
 
     #intro img:first-child{
@@ -128,7 +151,6 @@ nav{
 }
 
 /*Skilsssssss*/
-
 #skills{
     text-align: center;
 }
@@ -198,16 +220,204 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(Img/background/EYESRED.jpg);
+    background-image: url(Img/background/glitchy\ backlground.jpg);
+    background-position: center bottom;
     background-size: cover;
     height:60vh;
     width: 100vw;
     margin-top: 25vh;
+    margin-bottom: 25vh;
 }
 
 #work div{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 30vh;
-    width: 60vw;
-    background-color: rgb(0, 0, 0);
+    width: 70vw;
+}
+
+#work h2 {
+    font-size: 7vw;
+    margin: 0;
+}
+
+.work-btn {
+  font-size: 50px;
+  font-family: "Jersey 10", sans-serif;
+  color: #f5f5f5;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 50px 13px;
+  outline: 0;
+  border: 3px solid #f5f5f5;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0);
+  &::after {
+    content: "";
+    background-color: #000000;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+  }
+  &:hover::after {
+    top: -7px;
+    left: -7px;
+  }
+}
+
+
+
+
+
+
+/*Contact !!*/
+#contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-div{
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+
+.contact-btn {
+  position: relative;
+  background: none;
+  height: 50px;
+  width: 200px;
+  color: #f5f5f5;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Jersey 10", sans-serif;
+  border: 3px solid #f5f5f5;
+  padding: 0.3em 1em;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10%;
+    background: #000000;
+    height: 0.3em;
+    right: 80%;
+    top: -0.25em;
+    transform: skewX(-45deg);
+    -webkit-transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10%;
+    background: #000000;
+    height: 0.3em;
+    left: 80%;
+    bottom: -0.25em;
+    transform: skewX(45deg);
+    -webkit-transition: all 0.45 cubic-bezier(0.86, 0, 0.07, 1);
+    transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  &:hover {
+    color: #a10202;
+    &::before {
+      right: 15%;
+    }
+    &::after {
+      left: 15%;
+    }
+  }
+}
+
+.contact-btn:nth-of-type(2){
+    &::before {
+        transform: skewX(0deg);
+        right :45%;
+     }
+    &::after {
+        transform: skewX(0deg);
+        left: 45%;
+      }
+    &:hover {
+        &::before {
+          right: 15%;
+        }
+        &::after {
+          left: 15%;
+        }
+      }
+}
+
+.contact-btn:last-of-type{
+    &::before {
+        transform: skewX(45deg);
+        right :15%;
+     }
+    &::after {
+        transform: skewX(-45deg);
+        left: 15%;
+      }
+    &:hover {
+        &::before {
+          right: 80%;
+        }
+        &::after {
+          left: 80%;
+        }
+      }
+}
+
+
+.contact-btn img {
+  width: 40px;
+  height: 40px;
+  margin: -5px 10px -8px -5px;
+}
+
+/*footer :3 */ 
+footer{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5vw;
+}
+
+footer p{
+    color: #686868;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 1vw;
+    letter-spacing: 2px;
+}
+
+footer a{
+    color: #a10202;
+    text-decoration: none;
+    &:hover {
+        animation: pulse 1.5s infinite;
+    }
+}
+
+
+/*Animations*/
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

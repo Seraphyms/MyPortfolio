@@ -89,7 +89,7 @@ html, body {
 ========================== */
 button {
     color: #000;
-    background-color: #d83434;
+    background-color: #c40101;
     font-family: "Jersey 25";
     font-size: 350%;
     padding: 15px 40px;
@@ -120,7 +120,7 @@ button:active {
     font-size: 3em;
     padding: 15px 40px;
     color: black;
-    background: #d83434;
+    background: #e60202;
     border: none;
     cursor: pointer;
     font-family: "Jersey 25";
@@ -139,7 +139,7 @@ button:active {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    background: #d83434;
+    background: #e60202;
     color: black;
 }
 
