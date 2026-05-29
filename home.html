@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="Img/Star.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <script src="home.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+25&family=Tiny5&display=swap" rel="stylesheet">
     <title>Welcome</title>
 </head>
@@ -78,33 +79,49 @@
     <section id="work">
         <div>
         <h2>Wanna see my work ?</h2>
-        <button type="button" class="work-btn" onclick="window.location.href='work.html'">View Projects</button>
+        <button type="button" class="work-btn" id="work-button">View Projects</button>
         </div>
     </section>
 
     <section id="contact">
-        <h2>Contact Me</h2>
         <div id="contact-div">
+        <h2>Contact Me</h2>
+        <div id="contact-div-btn">
 
-        <a href="" class="contact-btn">
+        <button class="type1-btn"onclick="window.location.href='https://www.linkedin.com/in/jihann-delique/'">
             <img src="Img/Linkedin.svg"></img>
         Linkedin
-        </a>
+        </button>
 
-        <a href="" class="contact-btn">
-            <img src="Img/Github.svg"></img>
+        <button class="type1-btn mid" onclick="window.location.href='https://github.com/Seraphyms'">
+            <img src="Img/github.svg"></img>
         Github
-        </a>
+        </button>
 
-        <a href="" class="contact-btn">
+        <button class="type1-btn" onclick="window.location.href='mailto:jihann.delique@gmail.com'">
             <img src="Img/Email.svg"></img>
         Email
-        </a>
+        </button>
         </div>
     </section>
 
     <footer>
     <p>©2026 Seraphyms - Pictures from Pinterest / Picrew ( Artist : <a href="https://www.instagram.com/cbrfufu/?hl=fr" target="_blank">@cbrfufu</a> )</p>
     </footer>
+
+    <!--Notif au dessus de tout-->
+    <section id="notification-section" class="hidden">
+        <div id="notification">
+            <div id="notification-nav">
+                <button class="close-btn">X</button>
+            </div>
+            <h1>Choose your version</h1>
+            <div id="work-btns-div">
+                <button class="type1-btn" onclick="window.location.href='workClassic.html'"><img src="Img/WorkV1.svg">Work V1</button>
+                <button class="type1-btn closed"><img src="Img/InProgress.svg" alt="">In progress..</button>
+            </div>
+        
+        </div>
+    </section>   
 </body>
 </html>

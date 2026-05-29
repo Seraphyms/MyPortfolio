@@ -62,6 +62,7 @@ nav div{
 /*Introduction*/
     #intro{
         display: flex;
+        filter: grayscale(20%);
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -106,6 +107,7 @@ nav div{
 #presentation{
     display: flex;
     align-items: center;
+    filter: grayscale(20%);
     justify-content: space-between;
     height: 80vh;
     background-image: url(/Img/background/BrokenGlass.png);
@@ -147,11 +149,13 @@ nav div{
 #presentation-image img{
     width: auto;
     height: 80vh;
+    filter: grayscale(100%);
     border-radius: 50px;
 }
 
 /*Skilsssssss*/
 #skills{
+    
     text-align: center;
 }
 
@@ -169,6 +173,7 @@ nav div{
 
 .container{
     display:flex;
+    filter:grayscale(100%);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -218,6 +223,7 @@ nav div{
 /*Workkk*/
 #work{
     display: flex;
+    filter: grayscale(20%);
     align-items: center;
     justify-content: center;
     background-image: url(Img/background/glitchy\ backlground.jpg);
@@ -272,11 +278,6 @@ nav div{
   }
 }
 
-
-
-
-
-
 /*Contact !!*/
 #contact{
     display: flex;
@@ -285,7 +286,18 @@ nav div{
 }
 
 #contact-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("/Img/background/snowtv.jpg");
+    background-repeat: repeat;
+    background-position: center center;
     width: 100vw;
+    border-radius: 50px 50px 0px 0px;
+}
+
+#contact-div-btn{
+    width: 100%;
     height: 20vh;
     display: flex;
     justify-content: center;
@@ -293,17 +305,20 @@ nav div{
 }
 
 
-.contact-btn {
+.type1-btn{
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: none;
-  height: 50px;
+  height: 70px;
   width: 200px;
   color: #f5f5f5;
   text-align: center;
   text-decoration: none;
   font-family: "Jersey 10", sans-serif;
+  font-size: 30px;
   border: 3px solid #f5f5f5;
-  padding: 0.3em 1em;
   &::before {
     content: "";
     display: block;
@@ -341,7 +356,7 @@ nav div{
   }
 }
 
-.contact-btn:nth-of-type(2){
+.mid{
     &::before {
         transform: skewX(0deg);
         right :45%;
@@ -360,7 +375,7 @@ nav div{
       }
 }
 
-.contact-btn:last-of-type{
+.type1-btn:nth-of-type(3), .closed{
     &::before {
         transform: skewX(45deg);
         right :15%;
@@ -380,10 +395,11 @@ nav div{
 }
 
 
-.contact-btn img {
+.type1-btn img {
   width: 40px;
   height: 40px;
-  margin: -5px 10px -8px -5px;
+  margin-right: 20px;
+ 
 }
 
 /*footer :3 */ 
@@ -420,4 +436,59 @@ footer a{
     100% {
         transform: scale(1);
     }
+}
+
+
+/*Notification!*/
+#notification-section{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#notification{
+    display: flex;
+    background-color: #0f0f0f;
+    flex-direction: column;
+    justify-content:space-between;
+    height: 30vh;
+    width: 50vw;
+}
+
+#work-btns-div{
+    display: flex;
+    justify-content: space-around;
+}
+
+#work-btns-div button{
+    margin-top: 3vh;
+    height: 10vh;
+    width: 20vw;
+    font-size: 50px;
+    &::after {
+        background-color: #0f0f0f;
+    };
+    &::before {
+        background-color: #0f0f0f;
+    };
+    &:hover {
+        color: #f5f5f5;
+    };
+}
+
+.closed {
+    pointer-events: none;
+    filter: brightness(50%);
+}
+
+/*Hidden*/
+.hidden {
+    display: none!important;
 }

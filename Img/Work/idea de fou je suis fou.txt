@@ -1,0 +1,23 @@
+point and click a la Roam0120.. je suis foutu
+
+Accueil comme "acceuil du jeu"? 
+You are going to go through an experiment
+- inspired by the Game Roam0120 -
+
+Rue -> Maison -> Porte -> Couloir -> Différentes portes 
+				  -> Autre Couloir -> Portes
+						   -> "Exit"		
+Glitch/Redcore into
+- Still Redcore(FakeStore) 
+- SweetLavendercore(FakePortfolio)
+- PlageBluecore(BBnos)
+- MagicPurpleCore(horse)
+- Carely
+- CoffeeShop ?? (y a de la drogue dedans quand meme TwT
+
+Exit : MEssage erreur plus redirection écran d'acceuil
+
+petit message "only playable on fulldesktop screen?"
+option fr ou eng??
+
+pour tout avoir déjà charger, utiliser des calques et opacité 0 - 1 ?
