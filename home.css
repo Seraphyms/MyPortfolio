@@ -106,13 +106,15 @@ nav div{
 /*Presentation*/
 #presentation{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     filter: grayscale(20%);
     justify-content: space-between;
-    height: 80vh;
     background-image: url(/Img/background/BrokenGlass.png);
     background-size: cover;
     border-radius:50px;
+    height: auto;
     padding: 0%;
     margin: 0 5% 5vh 5%;
 }
@@ -120,6 +122,7 @@ nav div{
 #presentation-text{
     padding: 50px;
     margin: 70px;
+    width: 45%;
     text-align: center;
 }
 
@@ -141,14 +144,14 @@ nav div{
 */
 }
 
-#presentation-image{
+/*#presentation-image{
     display: flex;
         
-}
+}*/
 
-#presentation-image img{
-    width: auto;
-    height: 80vh;
+#presentation img{
+    width: 40%;
+    height: auto;
     filter: grayscale(100%);
     border-radius: 50px;
 }
@@ -160,7 +163,7 @@ nav div{
 }
 
 #skills h2{
-    font-size: 5vw;
+    font-size:5;
     padding-bottom: 0%;
 }
 
@@ -289,9 +292,9 @@ nav div{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("/Img/background/snowtv.jpg");
+    /*background-image: url("/Img/background/snowtv.jpg");
     background-repeat: repeat;
-    background-position: center center;
+    background-position: center center;*/
     width: 100vw;
     border-radius: 50px 50px 0px 0px;
 }
