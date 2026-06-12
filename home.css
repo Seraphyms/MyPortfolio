@@ -100,7 +100,7 @@ nav div{
 #presentation{
     display: flex;
     flex-wrap: wrap;
-    align-items: end;
+    align-items: center;
     justify-content: center;
     filter: grayscale(20%);
     justify-content: space-evenly;
