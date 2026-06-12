@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Rubik+80s+Fade&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap');
 
 
@@ -15,7 +12,7 @@ html, body{
 }
 
 /*Diviseur*/
-.divider{
+.separator{
     height: 15vh;
     background-image: url(Img/background/starry.jpg);
     background-position: center center;
@@ -45,6 +42,7 @@ nav div{
 
 .nav-button{
   font-size: 50px;
+  text-decoration: none;
   font-family: "Jersey 10", sans-serif;
   color: #f5f5f5;
   letter-spacing: 3px;
@@ -55,8 +53,12 @@ nav div{
   background-color: rgba(0, 0, 0, 0);
   &:hover {
     animation: pulse 0.2s;
+      text-decoration: none;
     color: #a10202;
 }
+ &:visited{
+    text-decoration: none;
+ }
 }
 
 /*Introduction*/
@@ -93,35 +95,25 @@ nav div{
         filter: opacity(90%);
         animation: rotation 7s linear infinite;
     }
-    
-    @keyframes rotation {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
-    }
 
 /*Presentation*/
 #presentation{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: end;
     justify-content: center;
     filter: grayscale(20%);
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-image: url(/Img/background/BrokenGlass.png);
     background-size: cover;
     border-radius:50px;
     height: auto;
-    padding: 0%;
-    margin: 0 5% 5vh 5%;
+    width: auto;
+    margin: 0 50px 5% 50px;
 }
 
 #presentation-text{
-    padding: 50px;
-    margin: 70px;
+    padding: 20px;
     width: 45%;
     text-align: center;
 }
@@ -139,18 +131,10 @@ nav div{
     margin: 0;
     font-family: "Jersey 10", sans-serif;
     letter-spacing: 8px;
-  /*  -webkit-text-stroke: #1a1a1a;
-    -webkit-text-stroke-width: 5px;
-*/
 }
 
-/*#presentation-image{
-    display: flex;
-        
-}*/
-
 #presentation img{
-    width: 40%;
+    width: 45%;
     height: auto;
     filter: grayscale(100%);
     border-radius: 50px;
@@ -158,12 +142,11 @@ nav div{
 
 /*Skilsssssss*/
 #skills{
-    
     text-align: center;
 }
 
 #skills h2{
-    font-size:5;
+    font-size:5vw;
     padding-bottom: 0%;
 }
 
@@ -242,6 +225,7 @@ nav div{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content:space-between;
     height: 30vh;
     width: 70vw;
 }
@@ -251,35 +235,59 @@ nav div{
     margin: 0;
 }
 
-.work-btn {
-  font-size: 50px;
+#work-btn {
+  font-size: 70px;
   font-family: "Jersey 10", sans-serif;
-  color: #f5f5f5;
+  color:transparent;
   font-weight: 200;
   letter-spacing: 1px;
-  padding: 13px 50px 13px;
+  padding: 13px 50px;
   outline: 0;
   border: 3px solid #f5f5f5;
   cursor: pointer;
   position: relative;
+  background: transparent;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0);
-  &::after {
-    content: "";
-    background-color: #000000;
-    width: 100%;
-    z-index: -1;
-    position: absolute;
-    height: 100%;
-    top: 7px;
-    left: 7px;
-    transition: 0.2s;
-  }
-  &:hover::after {
-    top: -7px;
-    left: -7px;
-  }
 }
+
+#work-btn::before {
+  content: "";
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  z-index: -1;
+  transition: 0.2s;
+}
+
+#work-btn::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  transition: 0.2s;
+  color: #000;
+  text-shadow:
+    2px 2px #e00101,
+    7px 1px #c2b8b8;
+
+  animation: glitchOnly 2s infinite steps(2, end);
+}
+
+#work-btn:hover::before {
+  top: -7px;
+  left: -7px;
+}
+
+#work-btn:hover::after {
+  top: 0;
+  left: -7px;
+}
+  
+
 
 /*Contact !!*/
 #contact{
@@ -292,9 +300,6 @@ nav div{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*background-image: url("/Img/background/snowtv.jpg");
-    background-repeat: repeat;
-    background-position: center center;*/
     width: 100vw;
     border-radius: 50px 50px 0px 0px;
 }
@@ -427,21 +432,6 @@ footer a{
     }
 }
 
-
-/*Animations*/
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-
 /*Notification!*/
 #notification-section{
     position: fixed;
@@ -460,30 +450,66 @@ footer a{
     display: flex;
     background-color: #0f0f0f;
     flex-direction: column;
-    justify-content:space-between;
-    height: 30vh;
+    align-items: center;
+    border-radius: 5px;
     width: 50vw;
+}
+
+#notification-nav{
+    display: flex;
+    justify-content: flex-end;
+    margin: 3px;
+    border-radius: 5px;
+    width: 99%;
+    background-color: #000000;
+}
+
+#notification-nav button{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    color: #f5f5f5;
+    cursor: pointer;
+
+    transition: color 0.3s ease;
+}
+
+#notification-nav button:hover{
+    color: #a10202;
+}
+
+#notification h1{
+    font-size: 80px;
+    text-align: center;
 }
 
 #work-btns-div{
     display: flex;
     justify-content: space-around;
+    padding-bottom:20px;
+    gap: 20px;
 }
 
 #work-btns-div button{
-    margin-top: 3vh;
-    height: 10vh;
-    width: 20vw;
-    font-size: 50px;
-    &::after {
-        background-color: #0f0f0f;
-    };
-    &::before {
-        background-color: #0f0f0f;
-    };
-    &:hover {
-        color: #f5f5f5;
-    };
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 30px;
+    background-color: rgba(0, 0, 0, 0.295);
+    font-family: "Jersey 10", sans-serif;
+    font-size: 40px;
+    padding: 10px 60px;
+    border: none;
+    color: #f5f5f5;
+    border-radius: 5px;
+    cursor: pointer;
+
+     transition: background-color 0.3s ease;
+}
+
+#work-btns-div button:hover{
+    background-color: #000;
 }
 
 .closed {
@@ -494,4 +520,58 @@ footer a{
 /*Hidden*/
 .hidden {
     display: none!important;
+}
+
+/*Animations*/
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+ @keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes glitchOnly {
+  0% {
+    transform: translate(0, 0);
+    clip-path: inset(0 0 10% 0);
+  }
+
+  20% {
+    transform: translate(-2px, 1px);
+    clip-path: inset(5% 0 8% 0);
+  }
+
+  40% {
+    transform: translate(2px, -1px);
+    clip-path: inset(3% 0 6% 0);
+  }
+
+  60% {
+    transform: translate(-1px, 1px);
+    clip-path: inset(6% 0 4% 0);
+  }
+
+  80% {
+    transform: translate(2px, -1px);
+    clip-path: inset(2% 0 7% 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+    clip-path: inset(0 0 0 0);
+  }
 }

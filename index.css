@@ -1,6 +1,3 @@
-/* ==========================
-   RESET & BASE
-========================== */
 html, body {
     margin: 0;
     padding: 0;
@@ -9,11 +6,9 @@ html, body {
     color: whitesmoke;
     font-family: "Jersey 25", sans-serif;
     overflow-x: hidden;
+    filter:grayscale(20%)
 }
 
-/* ==========================
-   CONTAINERS
-========================== */
 #up {
     height: 20vh;
 }
@@ -31,9 +26,7 @@ html, body {
     background-repeat: repeat-y;
 }
 
-/* ==========================
-   SECTION ME
-========================== */
+/*ME*/
 #me {
     display: flex;
     justify-content: space-around;
@@ -84,12 +77,10 @@ html, body {
     justify-content: center;
 }
 
-/* ==========================
-   BUTTONS
-========================== */
+/*button*/
 button {
     color: #000;
-    background-color: #c40101;
+    background-color: #fc0602;
     font-family: "Jersey 25";
     font-size: 350%;
     padding: 15px 40px;

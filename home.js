@@ -14,7 +14,7 @@ closeButton.addEventListener("click", () => {
 });*/
 
 
-const workButton = document.getElementById("work-button");
+const workButton = document.getElementById("work-btn");
 const notification = document.getElementById("notification-section");
 const closeButton = document.querySelector(".close-btn");
 
