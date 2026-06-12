@@ -104,7 +104,7 @@ nav div{
     justify-content: center;
     filter: grayscale(20%);
     justify-content: space-evenly;
-    background-image: url("/MyPortfolio/img/background/BrokenGlass.png");
+    background-image: url("/MyPortfolio/Img/background/BrokenGlass.png");
     background-size: cover;
     border-radius:50px;
     height: auto;
