@@ -1,11 +1,11 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    max-height: 100vh;
     background-color: black;
     color: whitesmoke;
     font-family: "Jersey 25", sans-serif;
-    overflow-x: hidden;
+    overflow: hidden;
     filter:grayscale(20%)
 }
 
