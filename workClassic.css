@@ -15,12 +15,12 @@ body{
 }
 
 section{
-    display: flex;
+    height: auto;
     margin: 0;
-      padding: 20px;
+    padding: 20px;
+    display: flex;
     justify-content:space-around;
     align-items: center;
-    height: auto;
     border-radius: 10px;
   
     /*scroll-snap-align: center;
@@ -84,6 +84,7 @@ h4{
   display: flex;
   justify-content: center!important;
   gap: 30px;
+  padding-top: 50px;
 }
 
 .button {

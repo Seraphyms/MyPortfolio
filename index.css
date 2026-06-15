@@ -21,7 +21,7 @@ html, body {
 }
 
 .cool {
-    background-image: url("/Img/background/Starswhitered.png");
+    background-image: url("Img/background/Starswhitered.png");
     background-size: cover;
     background-repeat: repeat-y;
 }
