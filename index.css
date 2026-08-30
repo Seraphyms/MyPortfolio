@@ -104,7 +104,7 @@ button:active {
 }
 
 /* ==========================
-   GLITCH BUTTON
+    GLITCH BUTTON
 ========================== */
 .glitch {
     position: relative;
@@ -165,7 +165,7 @@ button:active {
 }
 
 /* ==========================
-   CREEPY SCENE
+    CREEPY SCENE
 ========================== */
 .creepy {
     position: relative;
@@ -210,7 +210,7 @@ button:active {
 }
 
 /* ==========================
-   CRASH & SHAKE
+    CRASH & SHAKE
 ========================== */
 #crashScene {
     position: fixed;
@@ -261,7 +261,7 @@ body.crash-active #crash {
 }
 
 /* ==========================
-   BLACKOUT
+    BLACKOUT
 ========================== */
 #blackout {
     position: fixed;
@@ -278,14 +278,14 @@ body.blackout #blackout {
 }
 
 /* ==========================
-   FLASH EFFECT
+    FLASH EFFECT
 ========================== */
 body.flash {
     background: white;
 }
 
 /* ==========================
-   RESPONSIVE
+    RESPONSIVE
 ========================== */
 @media screen and (max-width: 768px) {
 

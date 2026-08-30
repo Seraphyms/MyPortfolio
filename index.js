@@ -21,7 +21,7 @@ startButton.addEventListener("click", () => {
         document.body.classList.add("blackout");
     }, 2000);
 
-    // Redirection finale
+    // Redirection finaleeee :3
     setTimeout(() => {
         window.location.href = "home.html";
     }, 4000);
